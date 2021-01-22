@@ -1,6 +1,6 @@
 <script>
-	import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 	import { onMount } from 'svelte';
+	import mapboxgl from 'mapbox-gl';
 
 	onMount(() => {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibGFtb2IiLCJhIjoiY2trOG10YWd0MG54ZTJ6bzBienFlNDBpdCJ9.e65J6b9meUMMK7s2UEvWWQ';
