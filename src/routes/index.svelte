@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Nuggit</title>
 </svelte:head>
 
 <div id="map"></div>
