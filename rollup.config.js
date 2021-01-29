@@ -18,6 +18,8 @@ const onwarn = (warning, onwarn) =>
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
 
+const { preprocess } = require('./svelte.config');
+
 export default {
 	client: {
 		input: config.client.input(),
@@ -31,7 +33,8 @@ export default {
 				compilerOptions: {
 					dev,
 					hydratable: true
-				}
+				},
+				preprocess
 			}),
 			url({
 				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
@@ -83,7 +86,8 @@ export default {
 					generate: 'ssr',
 					hydratable: true
 				},
-				emitCss: false
+				emitCss: false,
+				preprocess
 			}),
 			url({
 				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),

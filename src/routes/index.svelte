@@ -27,8 +27,8 @@
 	<title>Nuggit</title>
 </svelte:head>
 
+<button on:click={dropEr} class="bg-black text-white rounded-full fixed z-50 t-4 l-4">Drop</button>
 <div id="map"></div>
-<button on:click={dropEr} class="button">Drop</button>
 
 <style>
 	#map {
@@ -36,12 +36,12 @@
 		width: 100%;
 	}
 
-	.button {
+	/* .button {
 		background: #000;
 		color: #FFF;
 		padding: 4px;
 		position: fixed;
 		top: 2rem;
 		left: 2rem;
-	}
+	} */
 </style>
