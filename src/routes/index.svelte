@@ -14,16 +14,6 @@
 			center: [-71.411788, 41.825188],
 			zoom: 15
 		});
-
-		map.on('click', event => {
-			new mapboxgl.Marker()
-				.setLngLat(event.lngLat)
-				.addTo(map);
-		});
-
-		new mapboxgl.Marker()
-			.setLngLat([-71.411788, 41.825188])
-			.addTo(map);
 	});
 
 	function dropEr() {
