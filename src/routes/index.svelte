@@ -33,20 +33,4 @@
 		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 	</svg>
 </button>
-<div id="map"></div>
-
-<style>
-	#map {
-		height: 100%;
-		width: 100%;
-	}
-
-	/* .button {
-		background: #000;
-		color: #FFF;
-		padding: 4px;
-		position: fixed;
-		top: 2rem;
-		left: 2rem;
-	} */
-</style>
+<div id="map" class="h-full w-full"></div>
