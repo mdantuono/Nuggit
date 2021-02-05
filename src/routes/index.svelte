@@ -8,11 +8,16 @@
 
 	onMount(() => {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibGFtb2IiLCJhIjoiY2trOG10YWd0MG54ZTJ6bzBienFlNDBpdCJ9.e65J6b9meUMMK7s2UEvWWQ';
-		map = new mapboxgl.Map({
-			container: 'map',
-			style: 'mapbox://styles/mapbox/streets-v11',
-			center: [-71.411788, 41.825188],
-			zoom: 15
+
+		navigator.geolocation.getCurrentPosition(position => {
+			location = [position.coords.longitude, position.coords.latitude];
+
+			map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v11',
+				center: location,
+				zoom: 15
+			});
 		});
 	});
 
