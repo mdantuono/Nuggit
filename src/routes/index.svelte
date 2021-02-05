@@ -28,8 +28,9 @@
 			.setLngLat(location)
 			.addTo(map);
 
+		let title = prompt("Pin Name")
 		pins = [...pins, {
-			title: "A pin",
+			title: title,
 			coordinates: location
 		}];
 
