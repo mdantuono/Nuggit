@@ -25,10 +25,6 @@
 	});
 
 	function dropPin() {
-		new mapboxgl.Marker()
-			.setLngLat(location)
-			.addTo(map);
-
 		let title = prompt("Pin Name");
 		if (!title)
 			return;
@@ -37,6 +33,10 @@
 			_id: uuid(),
 			coordinates: location
 		}];
+
+		new mapboxgl.Marker()
+			.setLngLat(location)
+			.addTo(map);
 
 		console.log(pins);
 	}
