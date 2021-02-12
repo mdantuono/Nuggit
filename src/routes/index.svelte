@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import mapboxgl from 'mapbox-gl';
+	import {v4 as uuid} from 'uuid';
 
 	let map;
 	let pins = [];
@@ -33,6 +34,7 @@
 			return;
 		pins = [...pins, {
 			title: title,
+			_id: uuid(),
 			coordinates: location
 		}];
 
